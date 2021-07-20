@@ -1,0 +1,23 @@
+.logo__name {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+}
+
+.menu__elem {
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+}
+
+.main__header {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+}
+
+.main__text {
+    font-family: Roboto, sans-serif;
+    font-style: italic;
+}
+
+.button {
+    font-family: Roboto, sans-serif;
+}
