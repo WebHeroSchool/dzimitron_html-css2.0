@@ -8,16 +8,16 @@
     text-decoration: none;
 }
 
-.main__header {
+.main-content__header {
     font-family: Roboto, sans-serif;
     font-weight: bold;
 }
 
-.main__text {
+.main-content__content {
     font-family: Roboto, sans-serif;
     font-style: italic;
 }
 
-.button {
+.main-content__button {
     font-family: Roboto, sans-serif;
 }
