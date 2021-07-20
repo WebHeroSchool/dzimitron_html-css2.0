@@ -1,11 +1,52 @@
+body {
+    margin: 0;
+}
+
+.wrapper, .logo, .menu, .menu__elem, .main-section, .main-content {
+    border: dashed 1px red;
+}
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 40px 0;
+}
+
 .logo__name {
+    margin: 0;
     font-family: Roboto, sans-serif;
     font-weight: bold;
 }
 
+.menu {
+    display: flex;
+    align-items: center;
+}
+
 .menu__elem {
+    padding: 0 13px;
     font-family: Roboto, sans-serif;
     text-decoration: none;
+}
+
+.menu__elem:last-child {
+    padding-right: 0;
+}
+
+.main-section {
+    display: flex;
+}
+
+.main-content {
+    width: 50%;
 }
 
 .main-content__header {
