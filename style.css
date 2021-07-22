@@ -42,7 +42,7 @@ body {
 
 .logo__name {
     margin: 0;
-    font: bold 24px/32px pt_serifregular, Arial, Helvetica, sans-serif;
+    font: bold 24px/32px pt_serifbold, Arial, Helvetica, sans-serif;
 }
 
 .menu {
