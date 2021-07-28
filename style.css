@@ -12,7 +12,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 110px;
+  padding-bottom: 130px;
 }
 
 .logo {
@@ -113,6 +113,10 @@ body {
   padding-bottom: 40px;
 }
 
+.main-content {
+  width: 50%;
+}
+
 .main-content__title {
   margin: 0;
   padding: 75px 0 35px 0;
@@ -182,7 +186,7 @@ body {
 
 .main-image {
   margin: 0;
-  padding: 2px 5px 0 0;
+  padding: 2px 2px 0 0;
 }
 
 .main-image__image {
@@ -208,7 +212,7 @@ body {
   }
 
   .header {
-    padding-bottom: 84px;
+    padding-bottom: 83px;
   }
 
   .logo {
@@ -221,6 +225,10 @@ body {
     margin-right: 26px;
     font: 500 14px/16px Roboto, sans-serif;
     text-decoration: none;
+  }
+
+  .menu__elem:last-child {
+    margin-right: 5px;
   }
 
   .main-content__title {
@@ -241,9 +249,9 @@ body {
   }
 
   .main-content__subtitle {
-    width: 85%;
+    width: 100%;
     font: normal 18px/21px Roboto, sans-serif;
-    padding: 0 0 56px 0;
+    padding: 0 0 55px 0;
   }
 
   .main-content__button {
@@ -265,6 +273,16 @@ body {
 
   .footer {
     height: 100px;
+  }
+}
+
+@media (max-width: 1365px) {
+  .menu__elem:last-child {
+    margin-right: 0;
+  }
+
+  .main-content__button {
+    padding: 16px 25px 13px 16px;
   }
 }
 
@@ -327,6 +345,10 @@ body {
     padding: 24px 0;
   }
 
+  .logo__name {
+    display: none;
+  }
+
   .burger {
     display: flex;
     align-items: center;
@@ -340,7 +362,7 @@ body {
     width: 25px;
     height: 3px;
     right: 0;
-    top: 31px;
+    top: 28px;
     background-color: #0056ec;
   }
 
@@ -413,6 +435,7 @@ body {
   }
 
   .main-content {
+    padding-left: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -444,13 +467,13 @@ body {
   }
 
   .main-content__button {
-    padding: 0;
+    padding: 0 14px 0 2px;
     text-align: center;
   }
 
   .main-content__button::after {
     bottom: 28px;
-    left: 31px;
+    left: 37px;
   }
 
   .main-image {
@@ -466,10 +489,6 @@ body {
 @media (max-width: 375px) {
   .header {
     padding-bottom: 11px;
-  }
-
-  .logo__name {
-    display: none;
   }
 
   .main-content__subtitle {
