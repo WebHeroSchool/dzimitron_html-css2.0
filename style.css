@@ -221,11 +221,11 @@ body {
   top: 64px;
   width: 45px;
   height: 45px;
-  animation: fly-light 5s infinite;
+  animation: fly 5s infinite;
   transition: transform 0.3s;
 }
 
-@keyframes fly-light {
+@keyframes fly {
   5% {
     transform: translate(0, 2px) scale(1.5) rotate(5deg);
   }
@@ -324,11 +324,11 @@ body {
     left: 228px;
     top: 33px;
     transform: scale(0.65);
-    animation: fly-light 5s infinite;
+    animation: fly 5s infinite;
     transition: transform 0.3s;
   }
 
-  @keyframes fly-light {
+  @keyframes fly {
     0% {
       transform: translate(0, 0) scale(0.65) rotate(0deg);
     }
