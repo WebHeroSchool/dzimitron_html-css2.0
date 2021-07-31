@@ -82,7 +82,7 @@ body {
 .menu__elem::before {
   position: absolute;
   content: "";
-  width: 0px;
+  width: 0;
   top: 24px;
   height: 3px;
   background: #0056ec;
@@ -225,24 +225,6 @@ body {
   transition: transform 0.3s;
 }
 
-@keyframes fly {
-  5% {
-    transform: translate(0, 2px) scale(1.5) rotate(5deg);
-  }
-
-  10% {
-    transform: translate(0, 2px) scale(1.5) rotate(-5deg);
-  }
-
-  15% {
-    transform: scale(1.5) rotate(0deg);
-  }
-
-  20% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-}
-
 .main-image__image {
   width: 100%;
   height: auto;
@@ -326,28 +308,6 @@ body {
     transform: scale(0.65);
     animation: small-fly 5s infinite;
     transition: transform 0.3s;
-  }
-
-  @keyframes small-fly {
-    0% {
-      transform: translate(0, 0) scale(0.65) rotate(0deg);
-    }
-
-    5% {
-      transform: translate(0, 2px) scale(1) rotate(5deg);
-    }
-
-    10% {
-      transform: translate(0, 2px) scale(1) rotate(-5deg);
-    }
-
-    15% {
-      transform: translate(0, 2px) scale(1) rotate(0deg);
-    }
-
-    20% {
-      transform: translate(0, 0) scale(0.65) rotate(0);
-    }
   }
 }
 
@@ -649,5 +609,45 @@ body {
   100% {
     opacity: 0;
     transform: scale(1, 1) translateX(150px);
+  }
+}
+
+@keyframes fly {
+  5% {
+    transform: translate(0, 2px) scale(1.5) rotate(5deg);
+  }
+
+  10% {
+    transform: translate(0, 2px) scale(1.5) rotate(-5deg);
+  }
+
+  15% {
+    transform: scale(1.5) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes small-fly {
+  0% {
+    transform: translate(0, 0) scale(0.65) rotate(0deg);
+  }
+
+  5% {
+    transform: translate(0, 2px) scale(1) rotate(5deg);
+  }
+
+  10% {
+    transform: translate(0, 2px) scale(1) rotate(-5deg);
+  }
+
+  15% {
+    transform: translate(0, 2px) scale(1) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(0, 0) scale(0.65) rotate(0);
   }
 }
