@@ -4,6 +4,11 @@ body {
   justify-content: center;
 }
 
+.menu__elem,
+.main-content__button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .wrapper {
   width: 1528px;
 }
@@ -19,27 +24,27 @@ body {
   padding: 40px 0;
 }
 
-.logo__image {
-  margin-right: 16px;
-  position: relative;
+.logo__image,
+.logo__image::after {
+  display: block;
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #0056ec;
   opacity: 0.7;
 }
 
-.logo__image::after {
-  display: block;
+.logo__image {
   position: relative;
+  margin-right: 16px;
+  background: #0056ec;
+}
+
+.logo__image::after {
+  position: absolute;
   content: "";
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
   left: 8px;
   top: 7px;
   background: #c8dbfb;
-  opacity: 0.7;
 }
 
 .logo__name {
@@ -63,7 +68,7 @@ body {
   font: 500 18px/21px Roboto, sans-serif;
   text-decoration: none;
   color: #000;
-  transition: width, opacity 0.3s;
+  transition: width 0.3s, opacity 0.3s;
 }
 
 .menu__elem:active {
@@ -71,8 +76,7 @@ body {
 }
 
 .menu__elem:hover {
-  opacity: 0.5;
-  transition: width, opacity 0.3s;
+  opacity: 0.6;
 }
 
 .menu__elem::before {
@@ -82,7 +86,7 @@ body {
   top: 24px;
   height: 3px;
   background: #0056ec;
-  transition: 0.3s;
+  transition: width 0.3s, opacity 0.3s;
   opacity: 0;
 }
 
@@ -126,31 +130,29 @@ body {
   position: relative;
 }
 
-.main-content__title-text_highlight::before {
+.main-content__title-text_highlight::before,
+.main-content__title-text_highlight::after {
   display: block;
-  position: absolute;
-  top: 100px;
-  width: 498px;
-  height: 70px;
   content: "";
+  position: absolute;
+  height: 70px;
   background: #ecf3ff;
   z-index: -1;
 }
 
+.main-content__title-text_highlight::before {
+  top: 100px;
+  width: 498px;
+}
+
 .main-content__title-text_highlight::after {
-  display: block;
-  position: absolute;
   bottom: 6px;
   width: 296px;
-  height: 70px;
-  content: "";
-  background: #ecf3ff;
-  z-index: -1;
 }
 
 .main-content__subtitle {
   margin: 0;
-  padding: 0 0 60px 0;
+  padding-bottom: 60px;
   width: 60%;
   font: normal 22px/26px Roboto, sans-serif;
 }
@@ -176,7 +178,7 @@ body {
     90deg,
     #00d4ff 0%,
     #2600ff 25%,
-    #4b00a1 50%,
+    #380077 50%,
     #002fff 75%,
     #00d4ff 100%
   );
@@ -231,8 +233,6 @@ body {
 }
 
 @keyframes fly-light {
-  0% {
-  }
   5% {
     transform: translate(0, 2px) scale(1.5) rotate(5deg);
   }
@@ -255,7 +255,6 @@ body {
 .footer {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .footer__image {
@@ -284,17 +283,13 @@ body {
     text-decoration: none;
   }
 
-  .menu__elem:last-child {
-    margin-right: 5px;
-  }
-
   .main-section {
     padding-bottom: 85px;
   }
 
   .main-content__title {
-    font: bold 50px/65px pt_serifbold, Arial, Helvetica, sans-serif;
     padding: 18px 0 40px 0;
+    font: bold 50px/65px pt_serifbold, Arial, Helvetica, sans-serif;
   }
 
   .main-content__title-text_highlight::before {
@@ -310,9 +305,9 @@ body {
   }
 
   .main-content__subtitle {
+    padding-bottom: 55px;
     width: 100%;
     font: normal 18px/21px Roboto, sans-serif;
-    padding: 0 0 55px 0;
   }
 
   .main-content__button {
@@ -321,9 +316,6 @@ body {
   }
 
   .main-content__button::after {
-    bottom: 2px;
-    left: 0;
-    right: 27px;
     width: 209px;
     height: 44px;
   }
@@ -389,7 +381,7 @@ body {
 
   .main-content__title {
     font: bold 4.9vw/6.5vw pt_serifbold, Arial, Helvetica, sans-serif;
-    padding: 18px 0 3.8vw 0;
+    padding-bottom: 3.8vw;
   }
 
   .main-content__title-text_highlight::before {
@@ -417,7 +409,7 @@ body {
 
 @media (max-width: 768px) {
   .wrapper {
-    margin: 0px 24px;
+    margin: 0 24px;
   }
 
   .header {
@@ -506,6 +498,10 @@ body {
     margin: 0;
     padding: 0 0 26px 0;
     font: 500 30px/34px Roboto, sans-serif;
+  }
+
+  .menu__elem::before {
+    content: none;
   }
 
   .menu__elem_active::before {
@@ -620,9 +616,11 @@ body {
   .header {
     padding-bottom: 0;
   }
+
   .main-content__title {
     padding: 0 0 12px 0;
   }
+
   .main-content__subtitle {
     padding: 0 0 30px 0;
   }
